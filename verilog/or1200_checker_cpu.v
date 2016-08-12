@@ -7,10 +7,10 @@
 ////                                                              ////
 ////  Description                                                 ////
 ////  Checker to watch for HTs performing privilege escalation    ////
-////     operates on signals in the or1200_cpu module			  ////
+////     operates on signals in the or1200_cpu module		  ////
 ////                                                              ////
 ////  To Do:                                                      ////
-////   - 										                  ////
+////   - 							  ////
 ////                                                              ////
 ////  Author(s):                                                  ////
 ////      - Timothy Linscott, timlinsc@umich.edu                  ////
@@ -199,7 +199,8 @@ module or1200_checker_cpu(
   	end
   	else if (clk & except_type == `OR1200_EXCEPT_TICK) begin  			
   		except_countdown = except_countdown + 1;
-  		countdown_live = (except_countdown < countdown_max);
   	end
   end
+
+  assign countdown_live = (except_countdown < countdown_max);
 endmodule // or1200_checker
