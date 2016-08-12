@@ -139,15 +139,7 @@ output dtlb_uwe_o;
 output dtlb_swe_o;
 output dtlb_done_o;
 
-//
-// Transparency to checker
-//
-assign supv_dm = supv;
-assign dtlb_ure_o = dtlb_ure;
-assign dtlb_sre_o = dtlb_sre;
-assign dtlb_uwe_o = dtlb_uwe;
-assign dtlb_swe_o = dtlb_swe;
-assign dtlb_done_o = dtlb_done;
+
 
 //
 // Internal wires and regs
@@ -199,6 +191,16 @@ assign mbist_so_o = mbist_si_i;
 `endif
 
 `else
+
+//
+// Transparency to checker
+//
+assign supv_dm = supv;
+assign dtlb_ure_o = dtlb_ure;
+assign dtlb_sre_o = dtlb_sre;
+assign dtlb_uwe_o = dtlb_uwe;
+assign dtlb_swe_o = dtlb_swe;
+assign dtlb_done_o = dtlb_done;
 
 //
 // DTLB SPR access
