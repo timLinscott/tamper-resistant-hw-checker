@@ -1,0 +1,690 @@
+cores/or1200/or1200_fpu.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_fpu.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_fpu
+
+Top level modules:
+	or1200_fpu
+
+} {} {}} cores/or1200/or1200_operandmuxes.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_operandmuxes.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_operandmuxes
+
+Top level modules:
+	or1200_operandmuxes
+
+} {} {}} cores/or1200/or1200_rfram_generic.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_rfram_generic.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_rfram_generic
+
+Top level modules:
+	or1200_rfram_generic
+
+} {} {}} cores/or1200/or1200_fpu_addsub.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_fpu_addsub.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_fpu_addsub
+
+Top level modules:
+	or1200_fpu_addsub
+
+} {} {}} cores/or1200/or1200_spram_2048x32_bw.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_spram_2048x32_bw.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_spram_2048x32_bw
+
+Top level modules:
+	or1200_spram_2048x32_bw
+
+} {} {}} /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_checker_top.v {1 {vlog -work work -vopt /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_checker_top.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_checker_top
+
+Top level modules:
+	or1200_checker_top
+
+} {} {}} cores/or1200/or1200_ic_top.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_ic_top.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_ic_top
+
+Top level modules:
+	or1200_ic_top
+
+} {} {}} cores/or1200/or1200_fpu_pre_norm_addsub.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_fpu_pre_norm_addsub.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_fpu_pre_norm_addsub
+
+Top level modules:
+	or1200_fpu_pre_norm_addsub
+
+} {} {}} cores/arbiter/arbiter_dbus.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/arbiter/arbiter_dbus.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module arbiter_dbus
+
+Top level modules:
+	arbiter_dbus
+
+} {} {}} cores/or1200/or1200_rf.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_rf.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_rf
+
+Top level modules:
+	or1200_rf
+
+} {} {}} cores/or1200/or1200_fpu_pre_norm_mul.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_fpu_pre_norm_mul.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_fpu_pre_norm_mul
+
+Top level modules:
+	or1200_fpu_pre_norm_mul
+
+} {} {}} cores/uart16550/rtl/verilog/uart_tfifo.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top +incdir+cores/uart16550/rtl/verilog /home/timlinsc/A2-master-base/fpga_hardware/cores/uart16550/rtl/verilog/uart_tfifo.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module uart_tfifo
+
+Top level modules:
+	uart_tfifo
+
+} {} {}} cores/or1200/or1200_immu_top.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_immu_top.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_immu_top
+
+Top level modules:
+	or1200_immu_top
+
+} {} {}} cores/uart16550/rtl/verilog/uart_regs.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top +incdir+cores/uart16550/rtl/verilog /home/timlinsc/A2-master-base/fpga_hardware/cores/uart16550/rtl/verilog/uart_regs.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module uart_regs
+
+Top level modules:
+	uart_regs
+
+} {} {}} cores/or1200/or1200_spram_128x32.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_spram_128x32.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_spram_128x32
+
+Top level modules:
+	or1200_spram_128x32
+
+} {} {}} cores/top/orpsoc_top.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/top/orpsoc_top.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module orpsoc_top
+
+Top level modules:
+	orpsoc_top
+
+} {} {}} cores/or1200/or1200_spram_512x20.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_spram_512x20.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_spram_512x20
+
+Top level modules:
+	or1200_spram_512x20
+
+} {} {}} cores/or1200/or1200_dc_fsm.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_dc_fsm.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_dc_fsm
+
+Top level modules:
+	or1200_dc_fsm
+
+} {} {}} cores/or1200/or1200_gmultp2_32x32.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_gmultp2_32x32.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_gmultp2_32x32
+
+Top level modules:
+	or1200_gmultp2_32x32
+
+} {} {}} cores/or1200/or1200_ctrl.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_ctrl.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_ctrl
+
+Top level modules:
+	or1200_ctrl
+
+} {} {}} cores/or1200/or1200_spram_32x24.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_spram_32x24.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_spram_32x24
+
+Top level modules:
+	or1200_spram_32x24
+
+} {} {}} cores/or1200/or1200_pm.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_pm.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_pm
+
+Top level modules:
+	or1200_pm
+
+} {} {}} cores/or1200/or1200_genpc.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_genpc.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_genpc
+
+Top level modules:
+	or1200_genpc
+
+} {} {}} cores/uart16550/rtl/verilog/uart_receiver.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top +incdir+cores/uart16550/rtl/verilog /home/timlinsc/A2-master-base/fpga_hardware/cores/uart16550/rtl/verilog/uart_receiver.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module uart_receiver
+
+Top level modules:
+	uart_receiver
+
+} {} {}} cores/or1200/or1200_ic_tag.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_ic_tag.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_ic_tag
+
+Top level modules:
+	or1200_ic_tag
+
+} {} {}} cores/or1200/or1200_sprs.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_sprs.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_sprs
+
+Top level modules:
+	or1200_sprs
+
+} {} {}} cores/or1200/or1200_spram_64x22.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_spram_64x22.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_spram_64x22
+
+Top level modules:
+	or1200_spram_64x22
+
+} {} {}} cores/or1200/or1200_fpu_intfloat_conv_except.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_fpu_intfloat_conv_except.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_fpu_intfloat_conv_except
+
+Top level modules:
+	or1200_fpu_intfloat_conv_except
+
+} {} {}} cores/or1200/or1200_immu_tlb.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_immu_tlb.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_immu_tlb
+
+Top level modules:
+	or1200_immu_tlb
+
+} {} {}} cores/uart16550/rtl/verilog/uart_sync_flops.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/uart16550/rtl/verilog/uart_sync_flops.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module uart_sync_flops
+
+Top level modules:
+	uart_sync_flops
+
+} {} {}} cores/or1200/or1200_spram_1024x8.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_spram_1024x8.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_spram_1024x8
+
+Top level modules:
+	or1200_spram_1024x8
+
+} {} {}} cores/or1200/or1200_iwb_biu.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_iwb_biu.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_iwb_biu
+
+Top level modules:
+	or1200_iwb_biu
+
+} {} {}} cores/uart16550/rtl/verilog/uart_wb.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top +incdir+cores/uart16550/rtl/verilog /home/timlinsc/A2-master-base/fpga_hardware/cores/uart16550/rtl/verilog/uart_wb.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module uart_wb
+
+Top level modules:
+	uart_wb
+
+} {} {}} cores/or1200/or1200_cfgr.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_cfgr.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_cfgr
+
+Top level modules:
+	or1200_cfgr
+
+} {} {}} cores/or1200/or1200_spram.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_spram.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_spram
+
+Top level modules:
+	or1200_spram
+
+} {} {}} cores/or1200/or1200_lsu.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_lsu.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_lsu
+
+Top level modules:
+	or1200_lsu
+
+} {} {}} cores/arbiter/arbiter_ibus.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/arbiter/arbiter_ibus.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module arbiter_ibus
+
+Top level modules:
+	arbiter_ibus
+
+} {} {}} cores/or1200/or1200_dpram_32x32.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_dpram_32x32.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_dpram_32x32
+
+Top level modules:
+	or1200_dpram_32x32
+
+} {} {}} cores/or1200/or1200_fpu_post_norm_div.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_fpu_post_norm_div.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_fpu_post_norm_div
+
+Top level modules:
+	or1200_fpu_post_norm_div
+
+} {} {}} cores/or1200/or1200_spram_1024x32_bw.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_spram_1024x32_bw.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_spram_1024x32_bw
+
+Top level modules:
+	or1200_spram_1024x32_bw
+
+} {} {}} cores/or1200/or1200_dc_ram.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_dc_ram.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_dc_ram
+
+Top level modules:
+	or1200_dc_ram
+
+} {} {}} cores/or1200/or1200_reg2mem.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_reg2mem.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_reg2mem
+
+Top level modules:
+	or1200_reg2mem
+
+} {} {}} cores/or1200/or1200_spram_64x14.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_spram_64x14.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_spram_64x14
+
+Top level modules:
+	or1200_spram_64x14
+
+} {} {}} cores/or1200/or1200_freeze.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_freeze.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_freeze
+
+Top level modules:
+	or1200_freeze
+
+} {} {}} cores/or1200/or1200_spram_256x21.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_spram_256x21.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_spram_256x21
+
+Top level modules:
+	or1200_spram_256x21
+
+} {} {}} cores/or1200/or1200_dpram_256x32.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_dpram_256x32.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_dpram_256x32
+
+Top level modules:
+	or1200_dpram_256x32
+
+} {} {}} cores/or1200/or1200_dmmu_top.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_dmmu_top.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_dmmu_top
+
+Top level modules:
+	or1200_dmmu_top
+
+} {} {}} cores/ram_wb/ram_wb_b3.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/ram_wb/ram_wb_b3.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module ram_wb_b3
+
+Top level modules:
+	ram_wb_b3
+
+} {} {}} cores/or1200/or1200_sb.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_sb.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_sb
+
+Top level modules:
+	or1200_sb
+
+} {} {}} cores/or1200/or1200_fpu_pre_norm_div.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_fpu_pre_norm_div.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_fpu_pre_norm_div
+
+Top level modules:
+	or1200_fpu_pre_norm_div
+
+} {} {}} cores/or1200/or1200_fpu_post_norm_intfloat_conv.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_fpu_post_norm_intfloat_conv.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_fpu_post_norm_intfloat_conv
+
+Top level modules:
+	or1200_fpu_post_norm_intfloat_conv
+
+} {} {}} cores/or1200/or1200_fpu_mul.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_fpu_mul.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_fpu_mul
+
+Top level modules:
+	or1200_fpu_mul
+
+} {} {}} cores/or1200/or1200_spram_2048x8.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_spram_2048x8.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_spram_2048x8
+
+Top level modules:
+	or1200_spram_2048x8
+
+} {} {}} cores/or1200/or1200_wb_biu.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_wb_biu.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_wb_biu
+
+Top level modules:
+	or1200_wb_biu
+
+} {} {}} cores/or1200/or1200_cpu.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_cpu.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_cpu
+
+Top level modules:
+	or1200_cpu
+
+} {} {}} cores/clkgen/clkgen.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/clkgen/clkgen.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module clkgen
+
+Top level modules:
+	clkgen
+
+} {} {}} cores/or1200/or1200_wbmux.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_wbmux.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_wbmux
+
+Top level modules:
+	or1200_wbmux
+
+} {} {}} cores/or1200/or1200_top.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_top.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_top
+
+Top level modules:
+	or1200_top
+
+} {} {}} cores/or1200/or1200_dmmu_tlb.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_dmmu_tlb.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_dmmu_tlb
+
+Top level modules:
+	or1200_dmmu_tlb
+
+} {} {}} cores/or1200/or1200_fpu_post_norm_addsub.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_fpu_post_norm_addsub.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_fpu_post_norm_addsub
+
+Top level modules:
+	or1200_fpu_post_norm_addsub
+
+} {} {}} cores/or1200/or1200_tpram_32x32.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_tpram_32x32.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_tpram_32x32
+
+Top level modules:
+	or1200_tpram_32x32
+
+} {} {}} cores/or1200/or1200_amultp2_32x32.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_amultp2_32x32.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+
+} {} {}} cores/or1200/or1200_if.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_if.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_if
+
+Top level modules:
+	or1200_if
+
+} {} {}} cores/uart16550/rtl/verilog/uart_defines.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/uart16550/rtl/verilog/uart_defines.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+
+} {} {}} cores/uart16550/rtl/verilog/uart_rfifo.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top +incdir+cores/uart16550/rtl/verilog /home/timlinsc/A2-master-base/fpga_hardware/cores/uart16550/rtl/verilog/uart_rfifo.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module uart_rfifo
+
+Top level modules:
+	uart_rfifo
+
+} {} {}} cores/or1200/or1200_tt.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_tt.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_tt
+
+Top level modules:
+	or1200_tt
+
+} {} {}} cores/or1200/or1200_ic_fsm.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_ic_fsm.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_ic_fsm
+
+Top level modules:
+	or1200_ic_fsm
+
+} {} {}} cores/or1200/or1200_du.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_du.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_du
+
+Top level modules:
+	or1200_du
+
+} {} {}} cores/or1200/or1200_dc_top.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_dc_top.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_dc_top
+
+Top level modules:
+	or1200_dc_top
+
+} {} {}} cores/or1200/or1200_mult_mac.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_mult_mac.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_mult_mac
+
+Top level modules:
+	or1200_mult_mac
+
+} {} {}} /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_alarm.v {1 {vlog -work work -vopt /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_alarm.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_alarm
+
+Top level modules:
+	or1200_alarm
+
+} {} {}} cores/or1200/or1200_pic.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_pic.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_pic
+
+Top level modules:
+	or1200_pic
+
+} {} {}} cores/bench/or1200_monitor.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/bench/or1200_monitor.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_monitor
+
+Top level modules:
+	or1200_monitor
+
+} {} {}} cores/uart16550/rtl/verilog/raminfr.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/uart16550/rtl/verilog/raminfr.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module raminfr
+
+Top level modules:
+	raminfr
+
+} {} {}} cores/uart16550/rtl/verilog/uart_transmitter.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top +incdir+cores/uart16550/rtl/verilog /home/timlinsc/A2-master-base/fpga_hardware/cores/uart16550/rtl/verilog/uart_transmitter.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module uart_transmitter
+
+Top level modules:
+	uart_transmitter
+
+} {} {}} cores/or1200/or1200_sb_fifo.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_sb_fifo.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_sb_fifo
+
+Top level modules:
+	or1200_sb_fifo
+
+} {} {}} cores/or1200/or1200_dc_tag.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_dc_tag.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_dc_tag
+
+Top level modules:
+	or1200_dc_tag
+
+} {} {}} cores/or1200/or1200_spram_64x24.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_spram_64x24.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_spram_64x24
+
+Top level modules:
+	or1200_spram_64x24
+
+} {} {}} cores/or1200/or1200_ic_ram.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_ic_ram.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_ic_ram
+
+Top level modules:
+	or1200_ic_ram
+
+} {} {}} cores/or1200/or1200_dpram.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_dpram.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_dpram
+
+Top level modules:
+	or1200_dpram
+
+} {} {}} cores/or1200/or1200_fpu_div.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_fpu_div.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_fpu_div
+
+Top level modules:
+	or1200_fpu_div
+
+} {} {}} cores/or1200/or1200_spram_1024x32.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_spram_1024x32.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_spram_1024x32
+
+Top level modules:
+	or1200_spram_1024x32
+
+} {} {}} cores/uart16550/rtl/verilog/uart_debug_if.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top +incdir+cores/uart16550/rtl/verilog /home/timlinsc/A2-master-base/fpga_hardware/cores/uart16550/rtl/verilog/uart_debug_if.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module uart_debug_if
+
+Top level modules:
+	uart_debug_if
+
+} {} {}} cores/bench/orpsoc_testbench.v {2 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/bench/orpsoc_testbench.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module orpsoc_testbench
+** Warning: /home/timlinsc/A2-master-base/fpga_hardware/cores/bench/orpsoc_testbench.v(536): (vlog-2263) Redefinition of macro: TEST_NAME_STRING.
+
+Top level modules:
+	orpsoc_testbench
+
+} {} {}} cores/or1200/or1200_mem2reg.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_mem2reg.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_mem2reg
+
+Top level modules:
+	or1200_mem2reg
+
+} {} {}} cores/or1200/or1200_spram_32_bw.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_spram_32_bw.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_spram_32_bw
+
+Top level modules:
+	or1200_spram_32_bw
+
+} {} {}} cores/or1200/or1200_except.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_except.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_except
+
+Top level modules:
+	or1200_except
+
+} {} {}} cores/ram_wb/ram_wb.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/ram_wb/ram_wb.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module ram_wb
+
+Top level modules:
+	ram_wb
+
+} {} {}} cores/or1200/or1200_alu.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_alu.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_alu
+
+Top level modules:
+	or1200_alu
+
+} {} {}} cores/bench/uart_decoder.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/bench/uart_decoder.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module uart_decoder
+
+Top level modules:
+	uart_decoder
+
+} {} {}} cores/uart16550/rtl/verilog/uart_top.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top +incdir+cores/uart16550/rtl/verilog /home/timlinsc/A2-master-base/fpga_hardware/cores/uart16550/rtl/verilog/uart_top.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module uart_top
+
+Top level modules:
+	uart_top
+
+} {} {}} cores/or1200/or1200_spram_2048x32.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_spram_2048x32.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_spram_2048x32
+
+Top level modules:
+	or1200_spram_2048x32
+
+} {} {}} cores/or1200/or1200_fpu_post_norm_mul.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_fpu_post_norm_mul.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_fpu_post_norm_mul
+
+Top level modules:
+	or1200_fpu_post_norm_mul
+
+} {} {}} cores/or1200/or1200_fpu_intfloat_conv.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_fpu_intfloat_conv.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_fpu_intfloat_conv
+
+Top level modules:
+	or1200_fpu_intfloat_conv
+
+} {} {}} cores/or1200/or1200_fpu_fcmp.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_fpu_fcmp.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_fpu_fcmp
+
+Top level modules:
+	or1200_fpu_fcmp
+
+} {} {}} cores/arbiter/arbiter_bytebus.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/arbiter/arbiter_bytebus.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module arbiter_bytebus
+
+Top level modules:
+	arbiter_bytebus
+
+} {} {}} cores/or1200/or1200_xcv_ram32x8d.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_xcv_ram32x8d.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+
+} {} {}} /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_checker_cpu.v {1 {vlog -work work -vopt /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_checker_cpu.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_checker_cpu
+
+Top level modules:
+	or1200_checker_cpu
+
+} {} {}} cores/or1200/or1200_fpu_arith.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_fpu_arith.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_fpu_arith
+
+Top level modules:
+	or1200_fpu_arith
+
+} {} {}} cores/or1200/or1200_qmem_top.v {1 {vlog -work work -vopt +incdir+cores/bench +incdir+cores/or1200 +incdir+cores/top /home/timlinsc/A2-master-base/fpga_hardware/cores/or1200/or1200_qmem_top.v
+Model Technology ModelSim SE-64 vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module or1200_qmem_top
+
+Top level modules:
+	or1200_qmem_top
+
+} {} {}}
