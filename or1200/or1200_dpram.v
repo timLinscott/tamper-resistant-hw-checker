@@ -123,7 +123,13 @@ module or1200_dpram
    //
    //assign do_a = (oe_a) ? mem[addr_a_reg] : {dw{1'b0}};
    assign do_a = mem[addr_a_reg];
-   
+
+   integer k;
+   initial begin 
+      for(k = 0; k < (1 << aw); k = k + 1) begin
+         mem[k] = 0;
+      end
+   end
    
    //
    // RAM read

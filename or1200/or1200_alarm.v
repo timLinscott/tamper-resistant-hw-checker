@@ -17,7 +17,7 @@
 ////                                                              ////
 //////////////////////////////////////////////////////////////////////
 
-`include "or1200_defines.v"
+`include "/home/timlinsc/A2-master/fpga_hardware/cores/or1200/or1200_defines.v"
 
 module or1200_alarm(
 	//clk
@@ -48,10 +48,27 @@ input supv_consistent;
 
 output alarm;
 
+reg alarm_sig;
+
 //
 // Trigger an alarm when any of the assertions fail
 //
-assign alarm = !(immu_fault_ok & dmmu_fault_ok & supv_consistent & sr_ok & 
-                    pipeline_ok & mmus_ok) ;
+//assign alarm = ~(immu_fault_ok & dmmu_fault_ok & supv_consistent & sr_ok & 
+ //                   pipeline_ok & mmus_ok) ;
+
+assign alarm = alarm_sig;
+
+
+always @(*) begin
+	casex({sr_ok, pipeline_ok, mmus_ok, immu_fault_ok, dmmu_fault_ok, supv_consistent})
+		6'b0?????: alarm_sig <= 1;
+		6'b?0????: alarm_sig <= 1;
+		6'b??0???: alarm_sig <= 1;
+		6'b???0??: alarm_sig <= 1;
+		6'b????0?: alarm_sig <= 1;
+		6'b?????0: alarm_sig <= 1;
+		default: alarm_sig <= 0;
+	endcase
+end //always
 
 endmodule

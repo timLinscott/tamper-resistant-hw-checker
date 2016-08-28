@@ -76,22 +76,22 @@
 //
 // Do not implement Data cache
 //
-//`define OR1200_NO_DC
+`define OR1200_NO_DC
 
 //
 // Do not implement Insn cache
 //
-//`define OR1200_NO_IC
+`define OR1200_NO_IC
 
 //
 // Do not implement Data MMU
 //
-//`define OR1200_NO_DMMU
+`define OR1200_NO_DMMU
 
 //
 // Do not implement Insn MMU
 //
-//`define OR1200_NO_IMMU
+`define OR1200_NO_IMMU
 
 //
 // Select between ASIC optimized and generic multiplier
@@ -160,15 +160,15 @@
 // Size/type of insn/data cache if implemented
 // (consider available FPGA memory resources)
 //
-//`define OR1200_IC_1W_512B
+`define OR1200_IC_1W_512B
 //`define OR1200_IC_1W_4KB
-`define OR1200_IC_1W_8KB
+//`define OR1200_IC_1W_8KB
 //`define OR1200_IC_1W_16KB
 //`define OR1200_IC_1W_32KB
 //`define OR1200_DC_1W_4KB
-`define OR1200_DC_1W_8KB
+//`define OR1200_DC_1W_8KB
 //`define OR1200_DC_1W_16KB
-//`define OR1200_DC_1W_32KB
+`define OR1200_DC_1W_32KB
 
 `endif
 
@@ -359,8 +359,8 @@
 //
 // Type of ALU compare to implement
 //
-// Try to find which synthesizes with
-// most efficient logic use or highest speed.
+// Try either one to find what yields
+// higher clock frequencyin your case.
 //
 //`define OR1200_IMPL_ALU_COMP1
 //`define OR1200_IMPL_ALU_COMP2
@@ -807,6 +807,7 @@
 `define OR1200_SPR_GROUP_IC	5'd04
 `define OR1200_SPR_GROUP_MAC	5'd05
 `define OR1200_SPR_GROUP_DU	5'd06
+`define OR1200_SPR_GROUP_PC	5'd07
 `define OR1200_SPR_GROUP_PM	5'd08
 `define OR1200_SPR_GROUP_PIC	5'd09
 `define OR1200_SPR_GROUP_TT	5'd10
@@ -883,6 +884,16 @@
 `define OR1200_FPCSR_INF   10
 `define OR1200_FPCSR_DZF   11
 `define OR1200_FPCSR_RES   31:12
+
+// Performance counters
+`define OR1200_PC_PCCR0 5'd0
+`define OR1200_PC_PCCR1 5'd1
+`define OR1200_PC_PCCR2 5'd2
+`define OR1200_PC_PCCR3 5'd3
+`define OR1200_PC_PCCR4 5'd4
+`define OR1200_PC_PCCR5 5'd5
+`define OR1200_PC_PCCR6 5'd6
+`define OR1200_PC_PCCR7 5'd7
 
 /////////////////////////////////////////////////////
 //
@@ -1069,7 +1080,7 @@
 `define OR1200_PIC_IMPLEMENTED
 
 // Define number of interrupt inputs (2-31)
-`define OR1200_PIC_INTS 20
+`define OR1200_PIC_INTS 31
 
 // Address offsets of PIC registers inside PIC group
 `define OR1200_PIC_OFS_PICMR 2'd0
@@ -1275,12 +1286,12 @@
 // IC configurations
 //
 `ifdef OR1200_IC_1W_512B
-`define OR1200_ICSIZE                   9                       // 512
+`define OR1200_ICSIZE                   6 //9                       // 512
 `define OR1200_ICINDX                   `OR1200_ICSIZE-2        // 7
 `define OR1200_ICINDXH                  `OR1200_ICSIZE-1        // 8
 `define OR1200_ICTAGL                   `OR1200_ICINDXH+1       // 9
 `define OR1200_ICTAG                    `OR1200_ICSIZE-`OR1200_ICLS // 5
-`define OR1200_ICTAG_W                  24
+`define OR1200_ICTAG_W                  27 //24
 `endif
 `ifdef OR1200_IC_1W_4KB
 `define OR1200_ICSIZE			12			// 4096
@@ -1531,7 +1542,7 @@
 `define OR1200_VR_REV			6'h08
 `define OR1200_VR_RES1			10'h000
 `define OR1200_VR_CFG			8'h00
-`define OR1200_VR_VER			8'h13
+`define OR1200_VR_VER			8'h12
 
 // UPR fields
 `define OR1200_UPR_UP_BITS		0
@@ -1810,12 +1821,15 @@
 // vector to allow for power-on code to be run, if desired.                  //
 //                                                                           //
 // OR1200_BOOT_ADR should be the 32-bit address of the boot location         //
+// OR1200_BOOT_PCREG_DEFAULT should be ((OR1200_BOOT_ADR-4)>>2)              //
 //                                                                           //
 // For default reset behavior uncomment the settings under the "Boot 0x100"  //
 // comment below.                                                            //
 //                                                                           //
 ///////////////////////////////////////////////////////////////////////////////
 // Boot from 0xf0000100
+//`define OR1200_BOOT_PCREG_DEFAULT 30'h3c00003f
 //`define OR1200_BOOT_ADR 32'hf0000100
 // Boot from 0x100
- `define OR1200_BOOT_ADR 32'h00000100
+`define OR1200_BOOT_PCREG_DEFAULT 30'h0000003f
+`define OR1200_BOOT_ADR 32'h00000100

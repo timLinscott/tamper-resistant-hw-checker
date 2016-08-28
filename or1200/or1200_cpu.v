@@ -515,9 +515,9 @@ or1200_genpc #(.boot_adr(boot_adr)) or1200_genpc(
 	.genpc_refetch(genpc_refetch),
 	.genpc_freeze(genpc_freeze),
 	.no_more_dslot(no_more_dslot),
-	.lsu_stall(lsu_stall),
-	.du_flush_pipe(du_flush_pipe),
-	.spr_dat_npc(spr_dat_npc)
+	.lsu_stall(lsu_stall)//,
+	//.du_flush_pipe(du_flush_pipe),
+	//.spr_dat_npc(spr_dat_npc)
 );
 
 //
@@ -609,8 +609,8 @@ or1200_ctrl or1200_ctrl(
 	.rfe(rfe),
 	.du_hwbkpt(du_hwbkpt),
 	.except_illegal(except_illegal),
-	.dc_no_writethrough(dc_no_writethrough),
-	.du_flush_pipe(du_flush_pipe)
+	.dc_no_writethrough(dc_no_writethrough)//,
+	//.du_flush_pipe(du_flush_pipe)
 );
 
 //

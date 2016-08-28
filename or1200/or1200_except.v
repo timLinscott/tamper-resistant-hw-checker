@@ -518,7 +518,9 @@ assign except_flushpipe = |except_trig & ~|state;
 		       except_type <=  `OR1200_EXCEPT_ILLEGAL;
 		       eear <=  ex_pc;
 		       epcr <=  ex_dslot ? 
-			       wb_pc : ex_pc;
+			       wb_pc : delayed1_ex_dslot ? 
+				dl_pc : delayed2_ex_dslot ?
+				id_pc : ex_pc;
 		       dsx <= ex_dslot;
 		    end
 `endif

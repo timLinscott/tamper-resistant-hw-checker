@@ -69,7 +69,7 @@ module or1200_ctrl
    cust5_op, cust5_limm, id_pc, ex_pc, du_hwbkpt, 
    multicycle, wait_on, wbforw_valid, sig_syscall, sig_trap,
    force_dslot_fetch, no_more_dslot, id_void, ex_void, ex_spr_read, 
-   ex_spr_write, du_flush_pipe,
+   ex_spr_write, 
    id_mac_op, id_macrc_op, ex_macrc_op, rfe, except_illegal, dc_no_writethrough
    );
 
@@ -136,8 +136,8 @@ output					ex_macrc_op;
 output					rfe;
 output					except_illegal;
 output  				dc_no_writethrough;
-input					du_flush_pipe;
-
+   
+				
 //
 // Internal wires and regs
 //
@@ -244,10 +244,10 @@ end
 //
 // Flush pipeline
 //
-assign if_flushpipe = except_flushpipe | pc_we | extend_flush | du_flush_pipe;
-assign id_flushpipe = except_flushpipe | pc_we | extend_flush | du_flush_pipe;
-assign ex_flushpipe = except_flushpipe | pc_we | extend_flush | du_flush_pipe;
-assign wb_flushpipe = except_flushpipe | pc_we | extend_flush | du_flush_pipe;
+assign if_flushpipe = except_flushpipe | pc_we | extend_flush;
+assign id_flushpipe = except_flushpipe | pc_we | extend_flush;
+assign ex_flushpipe = except_flushpipe | pc_we | extend_flush;
+assign wb_flushpipe = except_flushpipe | pc_we | extend_flush;
 
 //
 // EX Sign/Zero extension of immediates
@@ -698,9 +698,7 @@ always @(posedge clk or `OR1200_RST_EVENT rst) begin
 `ifdef OR1200_MULT_IMPLEMENTED
 		`OR1200_OR32_MULI,
 `endif
-`ifdef OR1200_IMPL_ALU_ROTATE		  
 		`OR1200_OR32_SH_ROTI,
-`endif
 		`OR1200_OR32_SFXXI,
 		`OR1200_OR32_MTSPR,
 `ifdef OR1200_MAC_IMPLEMENTED
@@ -812,11 +810,11 @@ always @(posedge clk or `OR1200_RST_EVENT rst) begin
 	    `OR1200_OR32_MULI:
 	      alu_op <=  `OR1200_ALUOP_MUL;
 `endif
-`ifdef OR1200_IMPL_ALU_ROTATE	    
+	    
 	    // Shift and rotate insns with immediate
 	    `OR1200_OR32_SH_ROTI:
 	      alu_op <=  `OR1200_ALUOP_SHROT;
-`endif  
+	    
 	    // SFXX insns with immediate
 	    `OR1200_OR32_SFXXI:
 	      alu_op <=  `OR1200_ALUOP_COMP;
@@ -1010,10 +1008,9 @@ always @(posedge clk or `OR1200_RST_EVENT rst) begin
 `endif
 		  
 		// Shift and rotate insns with immediate
-`ifdef OR1200_IMPL_ALU_ROTATE
 		`OR1200_OR32_SH_ROTI:
 			rfwb_op <=  {`OR1200_RFWBOP_ALU, 1'b1};
-`endif
+		  
 		// ALU instructions except the one with immediate
 		`OR1200_OR32_ALU:
 			rfwb_op <=  {`OR1200_RFWBOP_ALU, 1'b1};

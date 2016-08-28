@@ -7,17 +7,17 @@
 ////                                                              ////
 ////  Description                                                 ////
 ////  Checker to watch for HTs performing privilege escalation    ////
-////     operates on signals in the or1200_cpu module		  ////
+////     operates on signals in the or1200_cpu module		          ////
 ////                                                              ////
 ////  To Do:                                                      ////
-////   - 							  ////
+////   - 							                                            ////
 ////                                                              ////
 ////  Author(s):                                                  ////
 ////      - Timothy Linscott, timlinsc@umich.edu                  ////
 ////                                                              ////
 //////////////////////////////////////////////////////////////////////
 
-`include "or1200_defines.v"
+`include "/home/timlinsc/A2-master/fpga_hardware/cores/or1200/or1200_defines.v"
 
 `define OR1200_OPCODE `OR1200_OPERAND_WIDTH-1:`OR1200_OPERAND_WIDTH-6
 
@@ -101,8 +101,8 @@ module or1200_checker_cpu(
    //
    // Output signals
    //
-   output sr_ok;
-   output pipeline_ok;
+   output reg sr_ok;
+   output reg pipeline_ok;
    output mmus_ok;
    output[2:0] secure_supv; //sends a bitstring of even parity when 1, else odd parity
 
@@ -119,10 +119,33 @@ module or1200_checker_cpu(
   //
   // IMPLEMENTATION
   //
-  assign sr_ok = sr_in_consistent & sr_we_ok & clk_ok;
-  assign pipeline_ok = supv_consistent & flush_ok & countdown_live;
+  //assign sr_ok = sr_in_consistent && sr_we_ok && clk_ok;
   assign mmus_ok = (dmmu_en == sr_dmmu) & (immu_en == sr_immu & ~except_started);
   assign secure_supv = (~supv_reg & ^mtspr_in_pipe) | (supv_reg & ~^mtspr_in_pipe) ? ~mtspr_in_pipe : mtspr_in_pipe;
+
+  //Check for pipeline consistency
+  //reg pipeline_ok_r;
+  always @(*) begin
+    case({supv_consistent, flush_ok, countdown_live})
+      3'b0??: pipeline_ok <= 0;
+      3'b?0?: pipeline_ok <= 0;
+      3'b??0: pipeline_ok <= 0;
+      default: pipeline_ok <= 1;
+    endcase
+  end
+
+  //assign pipeline_ok = pipeline_ok_r;
+
+  // Check for SR consistency
+  //Problem: Given 011, sr_ok_r == 1, sr_ok == X.
+  always @(*) begin
+    case({sr_in_consistent, sr_we_ok, clk_ok})
+      3'b0??: sr_ok <= 0;
+      3'b?0?: sr_ok <= 0;
+      3'b??0: sr_ok <= 0;
+      default: sr_ok <= 1;
+    endcase
+  end
 
   // Directly check supervision register
   always @(posedge sr_clk or `OR1200_RST_EVENT sr_rst)
@@ -141,12 +164,13 @@ module or1200_checker_cpu(
   assign sr_sel = (spr_cs_write_only[`OR1200_SPR_GROUP_SYS] && (spr_addr[10:0] == `OR1200_SPR_SR));
 
   // Check that cpu output to_sr == sprs input to_sr w.r.t. supv
-  assign sr_in_consistent = ((except_started | ((branch_op == `OR1200_BRANCHOP_RFE) & esr[`OR1200_SR_SM]) 
-            | (spr_we & sr_sel & spr_dat_o[`OR1200_SR_SM]) | sr_out) == sr_in);
+  //Currently, this may fail to detect faults because of how SR wraps from out back to in...
+  assign sr_in_consistent = (except_started | ((branch_op == `OR1200_BRANCHOP_RFE) & esr[`OR1200_SR_SM]) 
+            | (spr_we & sr_sel & spr_dat_o[`OR1200_SR_SM]) | sr_out) == sr_in;
 
   assign supv_consistent = (supv_reg == sr_out) & (sr_out == !sr_rst);
 
-  assign sr_we_check = (spr_we && sr_sel && mtspr_in_pipe[2]) | (branch_op == `OR1200_BRANCHOP_RFE) | 
+  assign sr_we_check = (spr_we && sr_sel && mtspr_in_pipe[1]) | (branch_op == `OR1200_BRANCHOP_RFE) | 
       flag_we | cy_we | ov_we;
 
   assign sr_we_ok = sr_we == sr_we_check;

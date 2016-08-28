@@ -18,7 +18,7 @@
 //////////////////////////////////////////////////////////////////////
 
 
-`include "or1200_defines.v"
+`include "/home/timlinsc/A2-master/fpga_hardware/cores/or1200/or1200_defines.v"
 
 module or1200_checker_top(
 	// Clock and reset

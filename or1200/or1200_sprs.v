@@ -389,7 +389,7 @@ module or1200_sprs(
    //
    // Supervision register
    //
-   assign supv_in = rst | to_sr[`OR1200_SR_SM];
+   assign supv_in = to_sr[`OR1200_SR_SM];
    
    always @(posedge clk or `OR1200_RST_EVENT rst)
      if (rst == `OR1200_RST_VALUE)
