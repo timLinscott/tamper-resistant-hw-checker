@@ -184,6 +184,7 @@ module orpsoc_testbench;
       integer 		j;
       begin
 
+
 `ifdef OR1200_RFRAM_GENERIC
 	 for(j = 0; j < 32; j = j + 1) begin
 	    gpr[j] = `OR1200_TOP.`CPU_cpu.`CPU_rf.rf_a.mem[gpr_no*32+j];
@@ -250,6 +251,11 @@ module orpsoc_testbench;
    wire 		     dc_en = orpsoc_testbench.dut.or1200_top0.or1200_dc_top.dc_en;
    always @(posedge dc_en)
      $display("Or1200 DC enabled at %t", $time);
+    wire        alarm = `OR1200_TOP.alarm;
+    always @(posedge alarm) begin
+      //if(ic_en & dc_en)
+        $display("SYSTEM FAILURE at %t", $time);
+    end
 
 //Watch program count for beginning of test
 wire[31:0] if_insn;
@@ -257,7 +263,9 @@ assign if_insn = `OR1200_TOP.`CPU_cpu.icpu_dat_i;
 always @(posedge clk) begin
   if(if_insn == 32'h040000e4)
     $display("Calling attack_signed_c at %t", $time);
-  else if(if_insn == 32'h04000385)
+  // else if(if_insn == 32'h040004be)
+  //   $display("Calling operation from main() at %t", $time);
+  else if(if_insn == 32'h13fffffa)
     $display("Calling _or1k_cache_init at %t", $time);
   else if(if_insn == 32'h0400064f)
     $display("Calling _or1k_board_init_early at %t", $time);
@@ -274,10 +282,8 @@ always @(posedge clk) begin
   else if(if_insn == 32'h07ffffb5) begin
     $display("Calling main at %t", $time); 
   end
-  /*else begin
-     $display("Current Instruction: (0x%h)", if_insn); 
-  end*/
 end
+
 
 `ifdef JTAG_DEBUG   
  `ifdef VPI_DEBUG
