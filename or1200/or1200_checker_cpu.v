@@ -17,7 +17,7 @@
 ////                                                              ////
 //////////////////////////////////////////////////////////////////////
 
-`include "/home/timlinsc/A2-master/fpga_hardware/cores/or1200/or1200_defines.v"
+`include "or1200_defines.v"
 
 `define OR1200_OPCODE `OR1200_OPERAND_WIDTH-1:`OR1200_OPERAND_WIDTH-6
 
@@ -84,7 +84,7 @@ module or1200_checker_cpu(
    input sr_immu;
 
    // Instructions to watch (pipe is IF, OD, EX, MEM, WB)
-   input [`OR1200_OPERAND_WIDTH-1:0] if_instr;
+   input [`OR1200_OPERAND_WIDTH-1:0] if_instr; //Can reduce down to opcodes
    input [`OR1200_OPERAND_WIDTH-1:0] ex_instr;
    input [`OR1200_OPERAND_WIDTH-1:0] wb_instr;
    input if_freeze; 
@@ -101,56 +101,53 @@ module or1200_checker_cpu(
    //
    // Output signals
    //
-   output reg sr_ok;
+   output sr_ok;
    output reg pipeline_ok;
    output mmus_ok;
    output[2:0] secure_supv; //sends a bitstring of even parity when 1, else odd parity
 
+ wire checked_rst;
  wire sr_sel;
  wire [31:0] unqualified_cs, spr_cs_write_only;
- wire sr_we_check, sr_we_ok, clk_ok,  ex_ok, flush_ok, countdown_live;
+ wire sr_we_check, sr_we_ok, clk_ok,  ex_ok, flush_ok;
+ //wire countdown_live;
  wire supv_consistent, sr_in_consistent, usr_mode_privs_recognized;
 
  reg supv_reg; //mimics the supervisor bit of the SR
 
  reg[2:0] mtspr_in_pipe; // Of IF, ID, EX, this vector stores which are processing a l.mtspr
- reg[3:0] except_countdown;
+ //reg[3:0] except_countdown;
 
   //
   // IMPLEMENTATION
   //
-  //assign sr_ok = sr_in_consistent && sr_we_ok && clk_ok;
   assign mmus_ok = (dmmu_en == sr_dmmu) & (immu_en == sr_immu & ~except_started);
   assign secure_supv = (~supv_reg & ^mtspr_in_pipe) | (supv_reg & ~^mtspr_in_pipe) ? ~mtspr_in_pipe : mtspr_in_pipe;
 
   //Check for pipeline consistency
-  //reg pipeline_ok_r;
   always @(*) begin
-    case({supv_consistent, flush_ok, countdown_live})
-      3'b0??: pipeline_ok <= 0;
-      3'b?0?: pipeline_ok <= 0;
-      3'b??0: pipeline_ok <= 0;
+    case({supv_consistent, flush_ok})
+      3'b0?: pipeline_ok <= 0;
+      3'b?0: pipeline_ok <= 0;
       default: pipeline_ok <= 1;
     endcase
   end
-
-  //assign pipeline_ok = pipeline_ok_r;
+  //assign pipeline_ok = supv_consistent & flush_ok;
 
   // Check for SR consistency
-  //Problem: Given 011, sr_ok_r == 1, sr_ok == X.
-  always @(*) begin
-    case({sr_in_consistent, sr_we_ok, clk_ok})
-      3'b0??: sr_ok <= 0;
-      3'b?0?: sr_ok <= 0;
-      3'b??0: sr_ok <= 0;
-      default: sr_ok <= 1;
-    endcase
-  end
+  assign sr_ok = sr_in_consistent && sr_we_ok && clk_ok;
 
-  // Directly check supervision register
-  always @(posedge sr_clk or `OR1200_RST_EVENT sr_rst)
+  //Merge rst lines
+  assign checked_rst = rst & sr_rst;
+
+  // Directly duplicate supervision register
+  always @(posedge sr_clk or `OR1200_RST_EVENT checked_rst)
   begin
-    if(sr_rst == `OR1200_RST_VALUE)
+  `ifdef OR1200_RST_ACT_LOW
+    if(~checked_rst)
+  `else
+    if(checked_rst)
+  `endif
       supv_reg <= 1;
     else if (sr_we | except_started) begin
       supv_reg <= sr_in;
@@ -166,7 +163,7 @@ module or1200_checker_cpu(
   // Check that cpu output to_sr == sprs input to_sr w.r.t. supv
   //Currently, this may fail to detect faults because of how SR wraps from out back to in...
   assign sr_in_consistent = (except_started | ((branch_op == `OR1200_BRANCHOP_RFE) & esr[`OR1200_SR_SM]) 
-            | (spr_we & sr_sel & spr_dat_o[`OR1200_SR_SM]) | sr_out) == sr_in;
+            | (spr_we & sr_sel & spr_dat_o[`OR1200_SR_SM]) | (~(spr_we & sr_sel) & sr_out)) == sr_in;
 
   assign supv_consistent = (supv_reg == sr_out) & (sr_out == !sr_rst);
 
@@ -216,15 +213,16 @@ module or1200_checker_cpu(
                     (ex_flushpipe ? ex_instr[`OR1200_OPCODE] == `OR1200_OR32_NOP : 1'b1) &
                     (wb_flushpipe ? wb_instr[`OR1200_OPCODE] == `OR1200_OR32_NOP : 1'b1);
 
-  always @(posedge clk or posedge rst) begin
+  //Used if we want some kind of a liveness check on the OS. 
+  /*always @(posedge clk or posedge rst) begin
   	if (rst) begin
   		// reset
   		except_countdown = 0;
   	end
-  	else if (clk & except_type == `OR1200_EXCEPT_TICK) begin  			
+  	else if (except_type == `OR1200_EXCEPT_TICK) begin  			
   		except_countdown = except_countdown + 1;
   	end
   end
 
-  assign countdown_live = (except_countdown < countdown_max);
+  assign countdown_live = (except_countdown < countdown_max);*/
 endmodule // or1200_checker

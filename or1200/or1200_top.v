@@ -94,7 +94,7 @@ module or1200_top(
 	pm_immu_gate_o, pm_tt_gate_o, pm_cpu_gate_o, pm_wakeup_o, pm_lvolt_o
 
 ,sig_tick,		  
-
+led_sr,
 
 	// External checker alarm handler
 	alarm
@@ -201,6 +201,8 @@ output			pm_tt_gate_o;
 output			pm_cpu_gate_o;
 output			pm_wakeup_o;
 output			pm_lvolt_o;
+
+output led_sr;
 
 // Checker output
 output 			alarm;
@@ -1026,7 +1028,7 @@ or1200_du or1200_du(
 	.id_pc(id_pc),
 	.du_dsr(du_dsr),
 	.du_dmr1(du_dmr1),
-	.du_flush_pipe(du_flush_pipe),
+	//.du_flush_pipe(du_flush_pipe),
 
 	// For Trace buffer
 	.spr_dat_npc(spr_dat_npc),

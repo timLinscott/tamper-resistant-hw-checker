@@ -7,10 +7,10 @@
 ////                                                              ////
 ////  Description                                                 ////
 ////  Checker to watch for HTs performing privilege escalation    ////
-////     operates on signals in the or1200_top module			  ////
+////     operates on signals in the or1200_top module			        ////
 ////                                                              ////
 ////  To Do:                                                      ////
-////   - 										                  ////
+////   - 				                     						                  ////
 ////                                                              ////
 ////  Author(s):                                                  ////
 ////      - Timothy Linscott, timlinsc@umich.edu                  ////
@@ -18,7 +18,7 @@
 //////////////////////////////////////////////////////////////////////
 
 
-`include "/home/timlinsc/A2-master/fpga_hardware/cores/or1200/or1200_defines.v"
+`include "or1200_defines.v"
 
 module or1200_checker_top(
 	// Clock and reset

@@ -186,7 +186,7 @@ assign rf_addrw = (spr_valid & spr_write) ? spr_addr[4:0] : addrw;
 //
 // RF write data is either from SPRS or normal from CPU datapath
 //
-assign rf_dataw = (spr_valid & spr_write) ? spr_dat_i : dataw;
+   assign rf_dataw = (rf_addrw == 0) ? 32'b0 : (spr_valid & spr_write) ? spr_dat_i : dataw;
 
 //
 // RF write enable is either from SPRS or normal from CPU control
