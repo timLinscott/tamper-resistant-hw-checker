@@ -242,6 +242,11 @@ module orpsoc_testbench;
 	end
      end
 
+ /* Notify the console when
+  * DC or IC is enabled
+  * Alarm signals a system failure or potential Trojan attack
+  * System changes between User and Kernel mode
+  */
  `define CPU_ic_top or1200_ic_top
  `define CPU_dc_top or1200_dc_top
    wire 		     ic_en = orpsoc_testbench.dut.or1200_top0.or1200_ic_top.ic_en;
@@ -253,8 +258,15 @@ module orpsoc_testbench;
      $display("Or1200 DC enabled at %t", $time);
     wire        alarm = `OR1200_TOP.alarm;
     always @(posedge alarm) begin
-      //if(ic_en & dc_en)
         $display("SYSTEM FAILURE at %t", $time);
+    end
+
+    wire        supv = `OR1200_TOP.supv;
+    always @(posedge supv) begin
+        $display("System entered kernel mode at %t", $time);
+    end
+    always @(negedge supv) begin
+        $display("System entered user mode at %t", $time);
     end
 
 //Watch program count for beginning of test
